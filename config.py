@@ -23,6 +23,7 @@ API_HASH = environ.get("API_HASH", "")
 BOT_TOKEN = environ.get("BOT_TOKEN", "")
 
 PICS = (environ.get('PICS', 'https://i.ibb.co/SwtF3jnt/6183581183783323158.jpg')).split() # Bot Start Picture
+AUTH_CHANNEL = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('AUTH_CHANNEL', '').split()] # give channel id with seperate space. Ex : ('-10073828 -102782829 -1007282828')
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
 BOT_USERNAME = environ.get("BOT_USERNAME", "") # without @
 PORT = environ.get("PORT", "8080")
